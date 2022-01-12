@@ -5,7 +5,7 @@ library(ggplot2)
 #gene expression by qPCR (Fig. 4, Extended Data Fig. 8-9)
 #haplotype based coloring
 
-df = greenhouse experiment qPCR-expression data (column = lines, observed week (times), FER-hap, SRK-hap, dCT (exp))
+df = greenhouse experiment qPCR-expression data (column = lines, observed week (times), FER-hap, SRK-hap, dCT (exp), sd)
 
 #FER_Alt
 ggplot(df, aes(x=times, y=exp, group=lines, color=lines)) +
@@ -55,7 +55,7 @@ ggplot(df, aes(x=times, y=exp, group=lines, color=lines)) +
 ggsave()
 
 #SRK_Hap2/3
-ggplot(SRKHapdf, aes(x=times, y=exp, group=lines, color=lines)) +
+ggplot(df, aes(x=times, y=exp, group=lines, color=lines)) +
   geom_line(size=0.7) +
   geom_point(size=1.5) +
   scale_x_discrete(limits=c("BT", "W1", "W2", "W3", "W4", "W5", "W6", "W7", "W8", "W9", "W10", "W11", "W12")) +
