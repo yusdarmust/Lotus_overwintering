@@ -41,10 +41,10 @@ expressions = expressions.reshape(-1,12,4)
 latitude = np.array([35.717,35.018,35.210,35.135,31.192,31.159,38.387,32.132,32.852,32.282,32.860,32.863])
 lat_bool = latitude >= np.mean(latitude)
 
-# Overwintering
+# Pop3_membership
 # Gifu, 008, 013, 016, 022, 028, 044, 066, 072, 110, 111, 113
-overwintering = np.array([86,47,93,73,65,39,96,48,88,52,31,79])
-phenotype = overwintering >= np.mean(overwintering)
+pop3_membership = np.array([86,47,93,73,65,39,96,48,88,52,31,79])
+phenotype = pop3_membership >= np.mean(pop3_membership)
 
 # Helper functions for pomegranate, which requires a list of 1d arrays
 def unpack_data(x):
