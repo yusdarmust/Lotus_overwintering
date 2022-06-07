@@ -6,7 +6,7 @@ library(ggplot2)
 #Greenhouse experiment
 #haplotype combination
 #Comb1_Ref/Hap1
-df = greenhouse experiment recovery data (column = lines, observed week, FER hap, SRK hap, recovery rates)
+df = greenhouse experiment recovery data (column = lines, observed week, FER hap, LecRK hap, recovery rates)
 
 ggplot(df, aes(x=week, y=surv_rate, group=lines, color=lines)) +
   geom_line(size=0.5) +
