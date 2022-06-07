@@ -5,7 +5,7 @@ library(ggplot2)
 #gene expression by qPCR (Fig. 4, Extended Data Fig. 8-9)
 #haplotype based coloring
 
-df = greenhouse experiment qPCR-expression data (column = lines, observed week (times), FER-hap, SRK-hap, dCT (exp), sd)
+df = greenhouse experiment qPCR-expression data (column = lines, observed week (times), FER-hap, LecRK-hap, dCT (exp), sd)
 
 #FER_Alt
 ggplot(df, aes(x=times, y=exp, group=lines, color=lines)) +
@@ -38,7 +38,7 @@ ggplot(df, aes(x=times, y=exp, group=lines, color=lines)) +
   theme(legend.position = "bottom", axis.title.x = element_blank())
 ggsave()
 
-#SRK_Hap1
+#LecRK_Hap1
 ggplot(df, aes(x=times, y=exp, group=lines, color=lines)) +
   geom_line(size=0.7) +
   geom_point(size=1.5) +
@@ -54,7 +54,7 @@ ggplot(df, aes(x=times, y=exp, group=lines, color=lines)) +
   theme(legend.position = "bottom", axis.title.x = element_blank())
 ggsave()
 
-#SRK_Hap2/3
+#LecRK_Hap2/3
 ggplot(df, aes(x=times, y=exp, group=lines, color=lines)) +
   geom_line(size=0.7) +
   geom_point(size=1.5) +
@@ -80,11 +80,11 @@ scale_color_manual(values=c("#FF3300", "#006600", "#FFCC33", "#003300", "#339933
 scale_color_manual(values=c("#CC9900", "#CC3300", "#FF3333", "#990066", "#00FF00", "#3399CC", "#9999FF", "#66CC99",
                             "#669900", "#990099", "#33CCFF", "#3300FF", "#0000FF", "#99CC33", "#6666FF"))
 
-#SRK_Hap1
+#LecRK_Hap1
 scale_color_manual(values=c("#FF3300", "#CC9900", "#006600", "#FFCC33", "#990066", "#003300", "#00FF00", "#339933",
                             "#3399CC", "#66CC99", "#0000FF", "#99CC33", "#CC6666", "#996699"))
 
-#SRK_Hap2/3
+#LecRK_Hap2/3
 scale_color_manual(values=c("#CC3300", "#FF3333", "#9999FF", "#669900", "#990099", "#33CCFF", "#3300FF", "#99CC66", "#6666FF"))
 
 
