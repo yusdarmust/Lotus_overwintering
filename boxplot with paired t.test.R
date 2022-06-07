@@ -67,7 +67,7 @@ ggboxplot(GH_all_alt, x="year", y="surv_rate",
   theme(legend.position = "right")
 ggsave("GH_paired t test/GH survival/paired t test/new_Paired t.test_GH_all_FER_alt.png", width=9.5, height=9, units = "cm", dpi=1200)
 
-#all year combined_SRK_hap1
+#all year combined_LecRK_hap1
 GH_all_hap1 <- read_csv("GH_paired t test/GH survival/GH_surv_all_SRK_hap1.csv")
 
 GH_hap1 <- list(c("win19/20", "win20/21"))
@@ -76,9 +76,9 @@ ggboxplot(GH_all_hap1, x="year", y="surv_rate",
   stat_compare_means(comparisons = GH_hap1, method = "t.test", label.y = c(1.15))+
   scale_color_manual(values = c("#FF6666", "#FF6666")) +
   theme(legend.position = "right")
-ggsave("GH_paired t test/GH survival/paired t test/Paired t.test_GH_all_SRK_hap1.png", width=9, height=9, units = "cm", dpi=1200)
+ggsave("GH_paired t test/GH survival/paired t test/Paired t.test_GH_all_LecRK_hap1.png", width=9, height=9, units = "cm", dpi=1200)
 
-#all year combined_SRK_hap3
+#all year combined_LecRK_hap3
 GH_all_hap3 <- read_csv("GH_paired t test/GH survival/GH_surv_all_SRK_hap3.csv")
 
 GH_hap3 <- list(c("win19/20", "win20/21"))
@@ -88,4 +88,4 @@ ggboxplot(GH_all_hap3, x="year", y="surv_rate",
   stat_compare_means(comparisons = GH_hap3, method = "t.test", label.y = c(1.15))+
   scale_y_continuous(limits=c(0.0, 1.0)) +
   theme(legend.position = "right")
-ggsave("GH_paired t test/GH survival/paired t test/Paired t.test_GH_all_SRK_hap3.png", width=9, height=9, units = "cm", dpi=1200)
+ggsave("GH_paired t test/GH survival/paired t test/Paired t.test_GH_all_LecRK_hap3.png", width=9, height=9, units = "cm", dpi=1200)
