@@ -28,24 +28,24 @@ ggplot(ces, aes(x=pop, y=hap_distribution, fill=hap)) +
   theme_test()
 ggsave("new gwas/LjFER pop.png", width=9, height=6, units = "cm", dpi=1200)
 
-#LjSRK
-LjSRK<- read_csv("new gwas/LjSRK.csv")
+#LjLecRK
+LjLecRK<- read_csv("new gwas/LjLecRK.csv")
 
-ggplot(LjSRK, aes(x=hap, y=ow)) + 
+ggplot(LjLecRK, aes(x=hap, y=ow)) + 
   geom_boxplot(aes(fill=hap), colour="black", lwd=0.6) +
   scale_x_discrete(limits=c("Hap1", "Hap2", "Hap3")) +
   scale_fill_manual(values=c("#FF9999", "#FFFF00", "#0099CC")) +
   theme_test()
-ggsave("new gwas/LjSRK.png", width=9, height=6.5, units = "cm", dpi=1200)
+ggsave("new gwas/LjLecRK.png", width=9, height=6.5, units = "cm", dpi=1200)
 
-LjSRK1<- read_csv("new gwas/LjSRK1.csv")
-ggplot(LjSRK1, aes(x=pop, y=value, fill=hap)) +
+LjLecRK1<- read_csv("new gwas/LjSRK1.csv")
+ggplot(LjLecRK1, aes(x=pop, y=value, fill=hap)) +
   geom_bar(stat="identity")
 
-cesc <- ddply(LjSRK1, "pop", transform,
+cesc <- ddply(LjLecRK1, "pop", transform,
               hap_distribution = value / sum(value) * 100)
 ggplot(cesc, aes(x=pop, y=hap_distribution, fill=hap)) +
   geom_bar(stat="identity", colour="black")+
   scale_fill_manual(values=c("#FF9999", "#FFFF00", "#0099CC")) +
   theme_test()
-ggsave("new gwas/LjSRK old pop.png", width=9, height=6.5, units = "cm", dpi=1200)
+ggsave("new gwas/LjLecRK old pop.png", width=9, height=6.5, units = "cm", dpi=1200)
