@@ -2,7 +2,7 @@
 library(tidyverse)
 library(ggplot2)
 
-#gene expression by qPCR (Fig. 4, Extended Data Fig. 8-9)
+#gene expression by qPCR (Fig. 4, Supplemental Fig. 11-12)
 #haplotype based coloring
 
 df = greenhouse experiment qPCR-expression data (column = lines, observed week (times), FER-hap, LecRK-hap, dCT (exp), sd)
